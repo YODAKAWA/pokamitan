@@ -1,4 +1,3 @@
-
 .section-title {
     width: 100%;
     padding: 60px 20px 0;
@@ -9,7 +8,8 @@
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    border-top: solid 2px rgb(255 188 137);;
+    border-top: solid 2px rgb(255 188 137);
+    ;
     padding-top: 25px;
 }
 
@@ -341,13 +341,34 @@
     padding-left: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .fv-bg {
-    width: 100%;
-}
-.fv-top {
-    height: 100vh;
-}
+        width: 100%;
+    }
+
+    .fv-top {
+        height: 100vh;
+    }
+
+    .fv-logo {
+        width: 80%;
+    }
+
+    .fv-title {
+        font-size: 2.2rem;
+    }
+
+    .fv-message p {
+        font-size: 1.6rem;
+        line-height: 5.4rem;
+        letter-spacing: 0.12rem;
+    }
+
+    .fv-message .fv-messege__copy p {
+        font-size: 3.0rem;
+        line-height: 5.8rem;
+        letter-spacing: 0.24rem;
+    }
 }
 
 .about {
@@ -384,7 +405,7 @@
 .about-partner__list {
     display: flex;
     margin: 0;
-    padding: 15px 0;
+    padding: 12px 0;
     width: max-content;
 }
 
@@ -476,18 +497,19 @@
     background-repeat: no-repeat;
     position: relative;
 }
+
 .service-marketing__bg-video {
-    position:absolute;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: 0 auto;
-    height:100%;
-    width:100%; 
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius:15px;
-    
+    border-radius: 15px;
+
 }
 
 .service-marketing__title-wrapper {
@@ -710,8 +732,8 @@
     align-items: flex-start;
     justify-content: center;
     gap: 5px;
-    flex:1;
-    transition:0.3s;
+    flex: 1;
+    transition: 0.3s;
 }
 
 .service-liver__entry-text h4 {
@@ -733,17 +755,61 @@
     padding: 0;
     padding-left: 20px;
     background-color: #06c755;
-    transition:0.3s;
+    transition: 0.3s;
 }
-.service-liver__entry:hover .service-liver__entry-text ,
-.service-liver__entry:hover .service-liver__entry-arrow  {
-    opacity:0.6;
-    transition:0.3s;
+
+.service-liver__entry:hover .service-liver__entry-text,
+.service-liver__entry:hover .service-liver__entry-arrow {
+    opacity: 0.6;
+    transition: 0.3s;
 }
 
 .service-liver__entry-arrow svg {
     width: 30px;
     stroke: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .service-marketing__title p {
+        font-size: 1.8rem;
+        line-height: 4.0rem;
+        padding-left: 13px;
+    }
+
+    .service-marketing__box-content-text h4 {
+        font-size: 2.4rem;
+    }
+
+    .service-marketing__box-content-text p {
+        font-size: 1.6rem;
+        line-height: 4.2rem;
+    }
+
+    .service-liver__entry {
+        height: 74px;
+    }
+
+    .service-liver__entry-icon {
+        width: 60px;
+        padding-right: 15px;
+    }
+
+    .service-liver__entry-text {
+        gap: 3px;
+    }
+
+    .service-liver__entry-text h4 {
+        font-size: 1.4rem;
+    }
+
+    .service-liver__entry-text p {
+        font-size: 1.4rem;
+    }
+
+    .service-liver__entry-arrow {
+        width: 60px;
+        padding-left: 16px;
+    }
 }
 
 .works {
@@ -758,13 +824,13 @@
     position: absolute;
     right: 30px;
     top: -52px;
-    display:flex;
-    gap:8px;
+    display: flex;
+    gap: 8px;
 }
 
-.works-list__prev-button ,
-.works-list__next-button  {
-    background-color:#fff;
+.works-list__prev-button,
+.works-list__next-button {
+    background-color: #fff;
     padding: 15px 18px;
     border-radius: 10px;
 }
@@ -774,6 +840,7 @@
     width: 30px;
     transition: 0.2s;
 }
+
 .works-list__prev-button:hover svg {
     opacity: 0.3;
     transition: 0.2s;
@@ -800,10 +867,12 @@
     width: 30px;
     transition: 0.2s;
 }
+
 .works-list__next-button:hover svg {
     opacity: 0.3;
     transition: 0.2s;
 }
+
 .works-list__ul-wrapper {
     overflow: hidden;
     padding-top: 35px;
@@ -813,7 +882,7 @@
     display: flex !important;
     justify-content: space-between;
     overflow: hidden;
-    width:100%;
+    width: 100%;
     position: relative;
 }
 
@@ -826,7 +895,7 @@
 }
 
 .works-list .slick-list {
-    width:100%;
+    width: 100%;
 }
 
 .works-list .slick-list {
@@ -837,7 +906,7 @@
 .works-list li {
     width: 340px;
     margin-right: 20px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -859,7 +928,7 @@
     width: 80px;
     height: 80px;
     border-radius: 900px;
-    background-color:#fff;
+    background-color: #fff;
     transition: 0.4s;
 }
 
@@ -955,7 +1024,7 @@
     font-size: 1.3rem;
     line-height: 1.3rem;
     font-weight: 500;
-    color:#5b5b5b;
+    color: #5b5b5b;
 }
 
 .works-list__tag h4::before {
@@ -964,11 +1033,38 @@
     padding-right: 1px;
     display: inline-block;
 }
-.works-list__contents:hover .works-list__title ,
-.works-list__contents:hover .works-list__category ,
+
+.works-list__contents:hover .works-list__title,
+.works-list__contents:hover .works-list__category,
 .works-list__contents:hover .works-list__tag {
     opacity: 0.7;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+    .works-list li {
+        max-width: 310px;
+    }
+
+    .works-list__last_contents {
+        right: -70px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .works-list__last_contents a {
+        padding: 10px;
+    }
+
+    .works-list__img {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .works-list li {
+        max-width: 270px;
+    }
 }
 
 .member {
@@ -1105,10 +1201,12 @@
     flex-direction: column;
     position: relative;
 }
+
 .blog-list li:hover .blog-list__contents {
     opacity: 0.6;
     transition: 0.3s;
 }
+
 .blog-list__contents {
     display: flex;
     align-items: center;
@@ -1183,13 +1281,15 @@
     width: 100%;
     object-fit: cover;
     transition: 0.3s;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
+
 .blog-list li:hover .blog-list__img img {
     scale: calc(1.1);
     transition: 0.3s;
 }
+
 .blog-list__arrow {
     position: absolute;
     bottom: 15px;
