@@ -7,18 +7,6 @@ hamburger.addEventListener('click', function () {
 });
 
 
-
-window.addEventListener('scroll', () => {
-
-  const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-
-      document.body.style.setProperty('--scroll-bg__color', scrollPercent);
-    });
-
-gsap.registerPlugin(ScrollTrigger);
-
 const lenis = new Lenis({
   duration: 1.6,       
   wheelMultiplier: 0.7, 
