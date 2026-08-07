@@ -14,17 +14,22 @@ html {
 
 body {
   box-sizing: border-box;
-  color: #1E1E1E;
+  color: #333;
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 400;
-  font-size: 1.3rem;
-  background: linear-gradient(180deg,
-      #e7bd99 0%,
-      #fadbc3 calc(var(--scroll-bg__color, 0) * 0.5%),
-      #ffd8bd calc(var(--scroll-bg__color, 0) * 1%),
-      #eab586 100%);
+  animation: bg-gradient 3s linear infinite alternate;
+  background: linear-gradient(45deg, #ecc2b0, #f8c7a7, #ffd99d) 0 / 200% 100%;
   background-attachment: fixed;
-  background-size: 105% 105%;
+  height: 100vh;
+  width: 100%;
+}
+
+@keyframes bg-gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 html.lenis,
@@ -152,6 +157,7 @@ button {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   transition: 0.2s;
+  color:#333;
 }
 
 .header-nav__button {
@@ -358,8 +364,8 @@ button {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.4s ease, visibility 0s 0.4s;
-    pointer-events:auto;
-}
+    pointer-events: auto;
+  }
 
   .header-logo {
     opacity: 0;
@@ -434,7 +440,7 @@ button {
   }
 
   .header-nav__list li {
-    padding: 20px 15px;
+    padding:15px;
     background-color: #fff;
     border-radius: 10px;
   }
@@ -443,9 +449,19 @@ button {
     padding-bottom: 20px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .header {
     max-width: 100%;
+    top: 20px;
+  }
+
+  .header-wrapper {
+    padding:40px 20px 20px;
+  }
+  .hamburger-menu {
+    width: 65px;
+    height: 45px;
   }
 }
 
@@ -480,6 +496,7 @@ button {
     border-radius: 0;
     margin-top: 0;
     clip-path: inset(0 round 0 0 0 0);
+    box-shadow: none;
   }
 }
 
@@ -532,6 +549,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 350px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .button {
     max-width: 100%;
@@ -765,14 +783,16 @@ body::-webkit-scrollbar-thumb {
 .footer-copylight small {
   font-size: 1.3rem;
 }
+
 @media screen and (max-width: 600px) {
   .footer {
-    width:100%;
+    width: 100%;
   }
 }
+
 @media screen and (max-width: 600px) {
   .footer {
     margin-bottom: 0;
-    border-radius:0;
+    border-radius: 0;
   }
 }
