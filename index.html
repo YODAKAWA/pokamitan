@@ -43,6 +43,14 @@
 </head>
 
 <body>
+    <div id="loader-overlay">
+        <div id="loader">
+            <div id="loader-left"></div>
+            <div id="loader-right"></div>
+            <div id="loader-top"></div>
+            <div id="loader-bottom"></div>
+        </div>
+    </div>
     <div class="body-wrapper">
         <header class="header" data-lenis-prevent>
             <div class="hamburger-menu">
@@ -50,40 +58,69 @@
                 <div class="hamburger-menu__line"></div>
                 <div class="hamburger-menu__line"></div>
             </div>
-            <div class="header-wrapper">
+            <div class="header-logo__sp">
+                    <svg width="100%" height="100%" viewBox="0 0 324 34" fill="#FFF" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="M45.8955 33.2474C38.4124 33.2474 32.3234 27.2124 32.3234 19.7957V13.6041C32.3234 6.18744 38.4124 0.152374 45.8955 0.152374C53.3785 0.152374 59.4676 6.18744 59.4676 13.6041V19.7957C59.4676 27.2124 53.3785 33.2474 45.8955 33.2474ZM45.8955 6.91634C42.1747 6.91634 39.1458 9.91637 39.1458 13.6062V19.7977C39.1458 23.4855 42.1726 26.4876 45.8955 26.4876C49.6183 26.4876 52.6452 23.4875 52.6452 19.7977V13.6062C52.6452 9.91843 49.6183 6.91634 45.8955 6.91634Z" />
+                            <path d="M77.6184 0.152374H70.796V33.2474H77.6184V0.152374Z" />
+                            <path
+                                d="M89.2502 33.2474L80.583 21.6838C78.3477 18.7023 78.3477 14.6975 80.583 11.716L89.2502 0.152374L97.6972 0.222382L86.0592 15.7496C85.6333 16.3179 85.6333 17.0839 86.0592 17.6522L97.7491 33.2474H89.2481H89.2502Z" />
+                            <path
+                                d="M186.077 33.2474L183.399 8.43178C183.378 8.24647 183.355 8.14352 183.341 8.08998C183.251 7.79348 183.104 7.55463 182.886 7.35902C182.362 6.89162 181.778 6.98633 181.479 7.08311C181.213 7.16959 180.576 7.45991 180.411 8.26294L176.961 25.075L170.357 25.0627L165.909 8.20735C165.707 7.44344 165.096 7.15929 164.841 7.07281C164.554 6.97398 163.993 6.87103 163.455 7.2746C163.185 7.47845 162.996 7.7523 162.894 8.08998C162.878 8.14352 162.855 8.24647 162.836 8.43178L160.158 33.2474H153.296L156.053 7.71112C156.113 7.149 156.213 6.64453 156.354 6.17095C156.87 4.44547 157.902 2.96296 159.338 1.88402C161.546 0.226489 164.44 -0.224442 167.076 0.681538C169.762 1.60399 171.794 3.77628 172.511 6.49628L173.242 9.26776L173.726 6.91427C174.327 3.99248 176.479 1.59781 179.344 0.660947C182.202 -0.273859 185.231 0.352091 187.452 2.33289C188.601 3.3583 189.442 4.68432 189.885 6.17095C190.026 6.64659 190.124 7.149 190.186 7.71112L192.943 33.2474H186.081H186.077Z" />
+                            <path d="M211.092 0.152374H204.269V33.2474H211.092V0.152374Z" />
+                            <path d="M237.043 9.07214H230.221V33.2474H237.043V9.07214Z" />
+                            <path d="M245.746 0.152374H221.52V6.91428H245.746V0.152374Z" />
+                            <path
+                                d="M6.82864 33.2474H0.0062324V25.6537H0V18.8917H0.0062324V0.152374H10.9628C18.0574 0.152374 23.8265 5.8724 23.8265 12.902C23.8265 19.9316 18.0553 25.6516 10.9628 25.6516H6.83072V33.2454L6.82864 33.2474ZM6.82864 18.8917H10.9607C14.293 18.8917 17.002 16.2047 17.002 12.904C17.002 9.60339 14.2909 6.91634 10.9607 6.91634H6.82864V18.8917Z" />
+                            <path
+                                d="M135.983 33.2475L126.472 7.6144C126.144 7.06875 125.622 6.98227 125.329 6.98227C125.037 6.98227 124.515 7.06669 124.187 7.6144L114.676 33.2475H107.407L117.923 4.9047L118.002 4.74821C119.384 1.95614 122.192 0.220367 125.331 0.220367C128.471 0.220367 131.277 1.95614 132.661 4.74821L132.74 4.9047L143.256 33.2475H135.987H135.983Z" />
+                            <path
+                                d="M279.729 33.2475L270.218 7.6144C269.89 7.06875 269.369 6.98227 269.076 6.98227C268.783 6.98227 268.261 7.06669 267.933 7.6144L258.423 33.2475H251.153L261.67 4.9047L261.749 4.74821C263.13 1.95614 265.939 0.220367 269.078 0.220367C272.217 0.220367 275.024 1.95614 276.407 4.74821L276.486 4.9047L287.002 33.2475H279.733H279.729Z" />
+                            <path
+                                d="M320.506 0H317.013L317.597 24.9433C317.36 24.6632 317.115 24.3379 316.856 23.9611C315.354 21.7579 314.034 18.5396 312.761 15.4284C311.354 11.9939 309.9 8.44003 307.995 5.65002C305.438 1.90256 302.309 0.00205905 298.696 0.00205905H295.204V33.4039H302.189L301.995 8.95273C302.11 9.1051 302.226 9.26776 302.347 9.44278C303.849 11.646 305.168 14.8642 306.441 17.9755C307.848 21.41 309.302 24.9639 311.207 27.7539C313.764 31.5013 316.893 33.4018 320.508 33.4018H324V0H320.508H320.506Z" />
+                        </g>
+                        <g>
+                            <path
+                                d="M125.329 30.3791C127.476 30.3791 129.216 28.6543 129.216 26.5267C129.216 24.399 127.476 22.6742 125.329 22.6742C123.183 22.6742 121.443 24.399 121.443 26.5267C121.443 28.6543 123.183 30.3791 125.329 30.3791Z"
+                                fill="#BC002D" />
+                            <path
+                                d="M269.076 30.3791C271.222 30.3791 272.963 28.6543 272.963 26.5267C272.963 24.399 271.222 22.6742 269.076 22.6742C266.929 22.6742 265.189 24.399 265.189 26.5267C265.189 28.6543 266.929 30.3791 269.076 30.3791Z"
+                                fill="#BC002D" />
+                        </g>
+                    </svg>
+                </div>
+            <div class="header-wrapper js-animate" >
                 <div class="header-logo">
-                    <svg width="100%" height="100%" viewBox="0 0 324 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M45.8955 33.2474C38.4124 33.2474 32.3234 27.2124 32.3234 19.7957V13.6041C32.3234 6.18744 38.4124 0.152374 45.8955 0.152374C53.3785 0.152374 59.4676 6.18744 59.4676 13.6041V19.7957C59.4676 27.2124 53.3785 33.2474 45.8955 33.2474ZM45.8955 6.91634C42.1747 6.91634 39.1458 9.91637 39.1458 13.6062V19.7977C39.1458 23.4855 42.1726 26.4876 45.8955 26.4876C49.6183 26.4876 52.6452 23.4875 52.6452 19.7977V13.6062C52.6452 9.91843 49.6183 6.91634 45.8955 6.91634Z"
-                            fill="#F15A24" />
-                        <path d="M77.6184 0.152374H70.796V33.2474H77.6184V0.152374Z" fill="#F15A24" />
-                        <path
-                            d="M89.2502 33.2474L80.583 21.6838C78.3477 18.7023 78.3477 14.6975 80.583 11.716L89.2502 0.152374L97.6972 0.222382L86.0592 15.7496C85.6333 16.3179 85.6333 17.0839 86.0592 17.6522L97.7491 33.2474H89.2481H89.2502Z"
-                            fill="#F15A24" />
-                        <path
-                            d="M186.077 33.2474L183.399 8.43178C183.378 8.24647 183.355 8.14352 183.341 8.08998C183.251 7.79348 183.104 7.55463 182.886 7.35902C182.362 6.89162 181.778 6.98633 181.479 7.08311C181.213 7.16959 180.576 7.45991 180.411 8.26294L176.961 25.075L170.357 25.0627L165.909 8.20735C165.707 7.44344 165.096 7.15929 164.841 7.07281C164.554 6.97398 163.993 6.87103 163.455 7.2746C163.185 7.47845 162.996 7.7523 162.894 8.08998C162.878 8.14352 162.855 8.24647 162.836 8.43178L160.158 33.2474H153.296L156.053 7.71112C156.113 7.149 156.213 6.64453 156.354 6.17095C156.87 4.44547 157.902 2.96296 159.338 1.88402C161.546 0.226489 164.44 -0.224442 167.076 0.681538C169.762 1.60399 171.794 3.77628 172.511 6.49628L173.242 9.26776L173.726 6.91427C174.327 3.99248 176.479 1.59781 179.344 0.660947C182.202 -0.273859 185.231 0.352091 187.452 2.33289C188.601 3.3583 189.442 4.68432 189.885 6.17095C190.026 6.64659 190.124 7.149 190.186 7.71112L192.943 33.2474H186.081H186.077Z"
-                            fill="#F15A24" />
-                        <path d="M211.092 0.152374H204.269V33.2474H211.092V0.152374Z" fill="#F15A24" />
-                        <path d="M237.043 9.07214H230.221V33.2474H237.043V9.07214Z" fill="#F15A24" />
-                        <path d="M245.746 0.152374H221.52V6.91428H245.746V0.152374Z" fill="#F15A24" />
-                        <path
-                            d="M6.82864 33.2474H0.0062324V25.6537H0V18.8917H0.0062324V0.152374H10.9628C18.0574 0.152374 23.8265 5.8724 23.8265 12.902C23.8265 19.9316 18.0553 25.6516 10.9628 25.6516H6.83072V33.2454L6.82864 33.2474ZM6.82864 18.8917H10.9607C14.293 18.8917 17.002 16.2047 17.002 12.904C17.002 9.60339 14.2909 6.91634 10.9607 6.91634H6.82864V18.8917Z"
-                            fill="#F15A24" />
-                        <path
-                            d="M135.983 33.2475L126.472 7.6144C126.144 7.06875 125.622 6.98227 125.329 6.98227C125.037 6.98227 124.515 7.06669 124.187 7.6144L114.676 33.2475H107.407L117.923 4.9047L118.002 4.74821C119.384 1.95614 122.192 0.220367 125.331 0.220367C128.471 0.220367 131.277 1.95614 132.661 4.74821L132.74 4.9047L143.256 33.2475H135.987H135.983Z"
-                            fill="#F15A24" />
-                        <path
-                            d="M125.329 30.3791C127.476 30.3791 129.216 28.6543 129.216 26.5267C129.216 24.399 127.476 22.6742 125.329 22.6742C123.183 22.6742 121.443 24.399 121.443 26.5267C121.443 28.6543 123.183 30.3791 125.329 30.3791Z"
-                            fill="#BC002D" />
-                        <path
-                            d="M279.729 33.2475L270.218 7.6144C269.89 7.06875 269.369 6.98227 269.076 6.98227C268.783 6.98227 268.261 7.06669 267.933 7.6144L258.423 33.2475H251.153L261.67 4.9047L261.749 4.74821C263.13 1.95614 265.939 0.220367 269.078 0.220367C272.217 0.220367 275.024 1.95614 276.407 4.74821L276.486 4.9047L287.002 33.2475H279.733H279.729Z"
-                            fill="#F15A24" />
-                        <path
-                            d="M269.076 30.3791C271.222 30.3791 272.963 28.6543 272.963 26.5267C272.963 24.399 271.222 22.6742 269.076 22.6742C266.929 22.6742 265.189 24.399 265.189 26.5267C265.189 28.6543 266.929 30.3791 269.076 30.3791Z"
-                            fill="#BC002D" />
-                        <path
-                            d="M320.506 0H317.013L317.597 24.9433C317.36 24.6632 317.115 24.3379 316.856 23.9611C315.354 21.7579 314.034 18.5396 312.761 15.4284C311.354 11.9939 309.9 8.44003 307.995 5.65002C305.438 1.90256 302.309 0.00205905 298.696 0.00205905H295.204V33.4039H302.189L301.995 8.95273C302.11 9.1051 302.226 9.26776 302.347 9.44278C303.849 11.646 305.168 14.8642 306.441 17.9755C307.848 21.41 309.302 24.9639 311.207 27.7539C313.764 31.5013 316.893 33.4018 320.508 33.4018H324V0H320.508H320.506Z"
-                            fill="#F15A24" />
+                    <svg width="100%" height="100%" viewBox="0 0 324 34" fill="#FFF" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="M45.8955 33.2474C38.4124 33.2474 32.3234 27.2124 32.3234 19.7957V13.6041C32.3234 6.18744 38.4124 0.152374 45.8955 0.152374C53.3785 0.152374 59.4676 6.18744 59.4676 13.6041V19.7957C59.4676 27.2124 53.3785 33.2474 45.8955 33.2474ZM45.8955 6.91634C42.1747 6.91634 39.1458 9.91637 39.1458 13.6062V19.7977C39.1458 23.4855 42.1726 26.4876 45.8955 26.4876C49.6183 26.4876 52.6452 23.4875 52.6452 19.7977V13.6062C52.6452 9.91843 49.6183 6.91634 45.8955 6.91634Z" />
+                            <path d="M77.6184 0.152374H70.796V33.2474H77.6184V0.152374Z" />
+                            <path
+                                d="M89.2502 33.2474L80.583 21.6838C78.3477 18.7023 78.3477 14.6975 80.583 11.716L89.2502 0.152374L97.6972 0.222382L86.0592 15.7496C85.6333 16.3179 85.6333 17.0839 86.0592 17.6522L97.7491 33.2474H89.2481H89.2502Z" />
+                            <path
+                                d="M186.077 33.2474L183.399 8.43178C183.378 8.24647 183.355 8.14352 183.341 8.08998C183.251 7.79348 183.104 7.55463 182.886 7.35902C182.362 6.89162 181.778 6.98633 181.479 7.08311C181.213 7.16959 180.576 7.45991 180.411 8.26294L176.961 25.075L170.357 25.0627L165.909 8.20735C165.707 7.44344 165.096 7.15929 164.841 7.07281C164.554 6.97398 163.993 6.87103 163.455 7.2746C163.185 7.47845 162.996 7.7523 162.894 8.08998C162.878 8.14352 162.855 8.24647 162.836 8.43178L160.158 33.2474H153.296L156.053 7.71112C156.113 7.149 156.213 6.64453 156.354 6.17095C156.87 4.44547 157.902 2.96296 159.338 1.88402C161.546 0.226489 164.44 -0.224442 167.076 0.681538C169.762 1.60399 171.794 3.77628 172.511 6.49628L173.242 9.26776L173.726 6.91427C174.327 3.99248 176.479 1.59781 179.344 0.660947C182.202 -0.273859 185.231 0.352091 187.452 2.33289C188.601 3.3583 189.442 4.68432 189.885 6.17095C190.026 6.64659 190.124 7.149 190.186 7.71112L192.943 33.2474H186.081H186.077Z" />
+                            <path d="M211.092 0.152374H204.269V33.2474H211.092V0.152374Z" />
+                            <path d="M237.043 9.07214H230.221V33.2474H237.043V9.07214Z" />
+                            <path d="M245.746 0.152374H221.52V6.91428H245.746V0.152374Z" />
+                            <path
+                                d="M6.82864 33.2474H0.0062324V25.6537H0V18.8917H0.0062324V0.152374H10.9628C18.0574 0.152374 23.8265 5.8724 23.8265 12.902C23.8265 19.9316 18.0553 25.6516 10.9628 25.6516H6.83072V33.2454L6.82864 33.2474ZM6.82864 18.8917H10.9607C14.293 18.8917 17.002 16.2047 17.002 12.904C17.002 9.60339 14.2909 6.91634 10.9607 6.91634H6.82864V18.8917Z" />
+                            <path
+                                d="M135.983 33.2475L126.472 7.6144C126.144 7.06875 125.622 6.98227 125.329 6.98227C125.037 6.98227 124.515 7.06669 124.187 7.6144L114.676 33.2475H107.407L117.923 4.9047L118.002 4.74821C119.384 1.95614 122.192 0.220367 125.331 0.220367C128.471 0.220367 131.277 1.95614 132.661 4.74821L132.74 4.9047L143.256 33.2475H135.987H135.983Z" />
+                            <path
+                                d="M279.729 33.2475L270.218 7.6144C269.89 7.06875 269.369 6.98227 269.076 6.98227C268.783 6.98227 268.261 7.06669 267.933 7.6144L258.423 33.2475H251.153L261.67 4.9047L261.749 4.74821C263.13 1.95614 265.939 0.220367 269.078 0.220367C272.217 0.220367 275.024 1.95614 276.407 4.74821L276.486 4.9047L287.002 33.2475H279.733H279.729Z" />
+                            <path
+                                d="M320.506 0H317.013L317.597 24.9433C317.36 24.6632 317.115 24.3379 316.856 23.9611C315.354 21.7579 314.034 18.5396 312.761 15.4284C311.354 11.9939 309.9 8.44003 307.995 5.65002C305.438 1.90256 302.309 0.00205905 298.696 0.00205905H295.204V33.4039H302.189L301.995 8.95273C302.11 9.1051 302.226 9.26776 302.347 9.44278C303.849 11.646 305.168 14.8642 306.441 17.9755C307.848 21.41 309.302 24.9639 311.207 27.7539C313.764 31.5013 316.893 33.4018 320.508 33.4018H324V0H320.508H320.506Z" />
+                        </g>
+                        <g>
+                            <path
+                                d="M125.329 30.3791C127.476 30.3791 129.216 28.6543 129.216 26.5267C129.216 24.399 127.476 22.6742 125.329 22.6742C123.183 22.6742 121.443 24.399 121.443 26.5267C121.443 28.6543 123.183 30.3791 125.329 30.3791Z"
+                                fill="#BC002D" />
+                            <path
+                                d="M269.076 30.3791C271.222 30.3791 272.963 28.6543 272.963 26.5267C272.963 24.399 271.222 22.6742 269.076 22.6742C266.929 22.6742 265.189 24.399 265.189 26.5267C265.189 28.6543 266.929 30.3791 269.076 30.3791Z"
+                                fill="#BC002D" />
+                        </g>
                     </svg>
                 </div>
                 <nav class="header-nav">
@@ -91,217 +128,165 @@
                         <li>
                             <a class="header-nav__button" href="index.html">
                                 <p class="header-nav__title">Top</p>
+                                <p class="header-nav__title-sub">トップ</p>
                             </a>
                         </li>
                         <li>
-                            <button class="header-nav__button">
+                            <a class="header-nav__button" href="index.html">
                                 <p class="header-nav__title">About</p>
-                                <div class="header-nav__button-arrow">
-                                    <svg width="100%" height="100%" viewBox="0 0 11 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.5 0.707092L5.5 5.70709L10.5 0.707092" stroke-linecap="round" />
-                                    </svg>
-                                </div>
-                            </button>
-                            <div class="header-nav__dropdown">
-                                <a class="header-nav__dropdown-button" href="about.html">
-                                    <p class="header-nav__dropdown-title">Top</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">会社詳細</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p>支店情報</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">事業実績</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                                <p class="header-nav__title-sub">会社概要</p>
+                            </a>
                         </li>
                         <li>
-                            <button class="header-nav__button">
+                            <a class="header-nav__button" href="index.html">
                                 <p class="header-nav__title">Service</p>
-                                <div class="header-nav__button-arrow">
-                                    <svg width="100%" height="100%" viewBox="0 0 11 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.5 0.707092L5.5 5.70709L10.5 0.707092" stroke-linecap="round" />
-                                    </svg>
-                                </div>
-                            </button>
-                            <div class="header-nav__dropdown">
-                                <a class="header-nav__dropdown-button" href="service.html">
-                                    <p class="header-nav__dropdown-title">Top</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p>動画制作</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">ライバー募集</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                                <p class="header-nav__title-sub">サービス</p>
+                            </a>
                         </li>
                         <li>
-                            <button class="header-nav__button">
+                            <a class="header-nav__button" href="index.html">
                                 <p class="header-nav__title">Works</p>
-                                <div class="header-nav__button-arrow">
-                                    <svg width="100%" height="100%" viewBox="0 0 11 7" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.5 0.707092L5.5 5.70709L10.5 0.707092" stroke-linecap="round" />
-                                    </svg>
-                                </div>
-                            </button>
-                            <div class="header-nav__dropdown">
-                                <a class="header-nav__dropdown-button" href="works.html">
-                                    <p class="header-nav__dropdown-title">Top</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">運用中</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">実績一覧</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">TikTok</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">YouTube</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                                <a class="header-nav__dropdown-button" href="">
-                                    <p class="header-nav__dropdown-title">Live Streaming</p>
-                                    <div class="header-nav__dropdown-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </a>
-                            </div>
+                                <p class="header-nav__title-sub">制作実績</p>
+                            </a>
                         </li>
                         <li>
-                            <a class="header-nav__button" href="member.html">
+                            <a class="header-nav__button" href="index.html">
+                                <p class="header-nav__title">blog</p>
+                                <p class="header-nav__title-sub">ブログ</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="header-nav__button" href="index.html">
                                 <p class="header-nav__title">Member</p>
+                                <p class="header-nav__title-sub">メンバー</p>
                             </a>
                         </li>
                         <li>
-                            <a class="header-nav__button" href="blog.html">
-                                <p class="header-nav__title">Blog</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="header-nav__button" href="contect.html">
+                            <a class="header-nav__button" href="index.html">
                                 <p class="header-nav__title">Contact</p>
+                                <p class="header-nav__title-sub">お問い合わせ</p>
                             </a>
                         </li>
                     </ul>
                 </nav>
-                <div class="header-nav__button side_menu">
-                    <a class="header-nav__side_menu" href="">
-                        <div class="header-nav__side_menu-icon">
-                            <img src="assets/img/line_icon.png" alt="ライバー募集">
-                        </div>
-                        <div class="header-nav__side_menu-text">
-                            <h4>Live streamer</h4>
-                            <p>ライバー募集中！</p>
-                        </div>
-                        <div class="header-nav__button-arrow">
-                            <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 5.93335H22.6667" stroke-width="1.5" />
-                                <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="header-nav__side_menu" href="">
-                        <div class="header-nav__side_menu-icon">
-                            <img src="assets/img/line_icon.png" alt="ライバー募集">
-                        </div>
-                        <div class="header-nav__side_menu-text">
-                            <h4>Live streamer</h4>
-                            <p>ライバー募集中！</p>
-                        </div>
-                        <div class="header-nav__button-arrow">
-                            <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 5.93335H22.6667" stroke-width="1.5" />
-                                <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
-                            </svg>
-                        </div>
-                    </a>
-                </div>
             </div>
         </header>
+        <div class="partner-contents">
+            <div class="partner-contents__track">
+                <ul class="partner-contents__list">
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/dentsu.png"
+                            alt="Dentsu">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/hakuhodo.png"
+                            alt="Hakuhodo"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/toyota.png"
+                            alt="TOYOTA">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/subaru.png"
+                            alt="SUBARU">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/tiktok.png"
+                            alt="TikTok">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/yoshimoto.png"
+                            alt="Yoshimoto"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/norton.png"
+                            alt="Norton">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/surugaya.png"
+                            alt="Surugaya"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/aidem.png" alt="AIDEM">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/musicon!tv.png"
+                            alt="MUSICON!TV"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/sanyodo.png"
+                            alt="Sanyodo">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/starry.png"
+                            alt="Starry">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/senryoku agent.png"
+                            alt="Senryoku Agent"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/nexus.png" alt="Nexus">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/frontier.png"
+                            alt="Frontier"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/nakatanibokujo.png"
+                            alt="Nakatanibokujo"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/kamiamakusa.png"
+                            alt="Kamiamakusa"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/yubetsu.png"
+                            alt="Yubetsu">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/hamanetsu.png"
+                            alt="Hamanetsu"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/nativecaravan.png"
+                            alt="Native Caravan"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/emijingu.png"
+                            alt="Emijingu"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/maiko.png" alt="Maiko">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/sozoo.png" alt="SOZOO">
+                    </li>
+                </ul>
+                <ul class="partner-contents__list" aria-hidden="true">
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/dentsu.png"
+                            alt="Dentsu">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/hakuhodo.png"
+                            alt="Hakuhodo"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/toyota.png"
+                            alt="TOYOTA">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/subaru.png"
+                            alt="SUBARU">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/tiktok.png"
+                            alt="TikTok">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/yoshimoto.png"
+                            alt="Yoshimoto"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/norton.png"
+                            alt="Norton">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/surugaya.png"
+                            alt="Surugaya"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/aidem.png" alt="AIDEM">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/musicon!tv.png"
+                            alt="MUSICON!TV"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/sanyodo.png"
+                            alt="Sanyodo">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/starry.png"
+                            alt="Starry">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/senryoku agent.png"
+                            alt="Senryoku Agent"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/nexus.png" alt="Nexus">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/frontier.png"
+                            alt="Frontier"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/nakatanibokujo.png"
+                            alt="Nakatanibokujo"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/kamiamakusa.png"
+                            alt="Kamiamakusa"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/yubetsu.png"
+                            alt="Yubetsu">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/hamanetsu.png"
+                            alt="Hamanetsu"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/nativecaravan.png"
+                            alt="Native Caravan"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/emijingu.png"
+                            alt="Emijingu"></li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/maiko.png" alt="Maiko">
+                    </li>
+                    <li class="partner-contents__list-item"><img src="./assets/img/partner_logo/sozoo.png" alt="SOZOO">
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="contents">
             <main class="main">
                 <section class="fv">
@@ -314,7 +299,7 @@
                         <div class="fv-logo">
                             <svg width="100%" height="100%" viewBox="0 0 324 34" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <g class="logo-letters">
+                                <g class="logo-letters js-animate">
                                     <path
                                         d="M45.8955 33.2474C38.4124 33.2474 32.3234 27.2124 32.3234 19.7957V13.6041C32.3234 6.18744 38.4124 0.152374 45.8955 0.152374C53.3785 0.152374 59.4676 6.18744 59.4676 13.6041V19.7957C59.4676 27.2124 53.3785 33.2474 45.8955 33.2474ZM45.8955 6.91634C42.1747 6.91634 39.1458 9.91637 39.1458 13.6062V19.7977C39.1458 23.4855 42.1726 26.4876 45.8955 26.4876C49.6183 26.4876 52.6452 23.4875 52.6452 19.7977V13.6062C52.6452 9.91843 49.6183 6.91634 45.8955 6.91634Z" />
                                     <path d="M77.6184 0.152374H70.796V33.2474H77.6184V0.152374Z" />
@@ -335,76 +320,92 @@
                                         d="M320.506 0H317.013L317.597 24.9433C317.36 24.6632 317.115 24.3379 316.856 23.9611C315.354 21.7579 314.034 18.5396 312.761 15.4284C311.354 11.9939 309.9 8.44003 307.995 5.65002C305.438 1.90256 302.309 0.00205905 298.696 0.00205905H295.204V33.4039H302.189L301.995 8.95273C302.11 9.1051 302.226 9.26776 302.347 9.44278C303.849 11.646 305.168 14.8642 306.441 17.9755C307.848 21.41 309.302 24.9639 311.207 27.7539C313.764 31.5013 316.893 33.4018 320.508 33.4018H324V0H320.508H320.506Z" />
                                 </g>
                                 <g class="logo-red-dots">
-                                    <path class="dot-1"
+                                    <path class="dot-1 js-animate"
                                         d="M125.329 30.3791C127.476 30.3791 129.216 28.6543 129.216 26.5267C129.216 24.399 127.476 22.6742 125.329 22.6742C123.183 22.6742 121.443 24.399 121.443 26.5267C121.443 28.6543 123.183 30.3791 125.329 30.3791Z"
                                         fill="#BC002D" />
-                                    <path class="dot-2"
+                                    <path class="dot-2 js-animate"
                                         d="M269.076 30.3791C271.222 30.3791 272.963 28.6543 272.963 26.5267C272.963 24.399 271.222 22.6742 269.076 22.6742C266.929 22.6742 265.189 24.399 265.189 26.5267C265.189 28.6543 266.929 30.3791 269.076 30.3791Z"
                                         fill="#BC002D" />
                                 </g>
                             </svg>
                         </div>
                         <h1 class="fv-title">
-                            <div class="animate-title inview">
-                                <span class="char">陽</span>
-                                <span class="char">だ</span>
-                                <span class="char">ま</span>
-                                <span class="char">り</span>
-                                <span class="char">を</span>
-                                <span class="char">、</span>
-                                <span class="char">仕</span>
-                                <span class="char">掛</span>
-                                <span class="char">け</span>
-                                <span class="char">る</span>
-                                <span class="char">。</span>
+                            <div class="animate-title inview js-animate">
+                                <span class="char js-animate">陽</span>
+                                <span class="char js-animate">だ</span>
+                                <span class="char js-animate">ま</span>
+                                <span class="char js-animate">り</span>
+                                <span class="char js-animate">を</span>
+                                <span class="char js-animate">、</span>
+                                <span class="char js-animate">仕</span>
+                                <span class="char js-animate">掛</span>
+                                <span class="char js-animate">け</span>
+                                <span class="char js-animate">る</span>
+                                <span class="char js-animate">。</span>
                             </div>
                         </h1>
                         <div class="scroll-down__wrapper">
-                            <a href="#" class="scroll-down">
+                            <a href="#fv-message" class="scroll-down">
                                 <div class="scroll-down__line"></div>
                                 <p>Scroll Down</p>
                             </a>
                         </div>
                     </div>
-                    <div class="fv-message">
-                        <p class="reveal-text">熱狂より、消えないものを。<br>残らなければ、はじまらない。<br><br>ふと思い出す言葉。<br>気づけば帰ってしまう場所。<br>そこには、身体の芯からひろがる熱がある。<br><br>ワンスクロールではぐれてしまう<br>今だからこそ<br>誰かの心の、まず端っこに<br>陽だまりのような温度を。</p>
+                    <div id="fv-message" class="fv-message">
+                        <p class="reveal-text">熱狂より、消えないものを。</p>
+                        <p class="reveal-text">残らなければ、はじまらない。</p><br><br>
+                        <p class="reveal-text">ふと思い出す言葉。</p>
+                        <p class="reveal-text">気づけば帰ってしまう場所。</p>
+                        <p class="reveal-text">そこには、身体の芯からひろがる熱がある。</p><br><br>
+                        <p class="reveal-text">ワンスクロールではぐれてしまう</p>
+                        <p class="reveal-text">今だからこそ</p>
+                        <p class="reveal-text">誰かの心の、まず端っこに</p>
+                        <p class="reveal-text">陽だまりのような温度を。</p>
+                        </p>
                         <div class="fv-messege__copy-wrapper">
                             <div class="fv-messege__copy">
-                                <p class="reveal-text">さぁ、<br>ぽかぽかを始めよう。</p>
+                                <p class="reveal-text">さぁ、ぽかぽかを始めよう。</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <div class="section-wrapper">
                     <section class="about">
-                        <div class="section-title">
-                            <div class="section-sub_title">
-                                <div class="section-title__object">
+                        <div class="section-lead">
+                            <div class="section-title__wrapper">
+                                <div class="section-title">
+                                    <div class="section-sub_title fadein">
+                                        <div class="section-title__object">
+                                        </div>
+                                        <p>会社概要</p>
+                                    </div>
+                                    <div class="section-main_title">
+                                        <h2 class="fadein">About</h2>
+                                    </div>
                                 </div>
-                                <p>ぽかみたんとは</p>
-                            </div>
-                            <div class="section-main_title">
-                                <h2 class="fadein">About</h2>
-                            </div>
-                        </div>
-                        <div class="about-lead">
-                            <p class="about-lead__title">“ぽかぽか”で、物語を動かす。</p>
-                            <p class="about-lead__description">
-                                私たちがつくりたいのは、<br>お客様の想いが、誰かの心に残る体験です。<br>ワンスクロールで流れていってしまう今だからこそ、<br>心に残る温度を仕掛け、<br>一人ひとりの物語を、前へと進めていきます。
-                            </p>
-                        </div>
-                        <div class="button">
-                            <a href="">
-                                <p>View More</p>
-                                <div class="button-arrow">
-                                    <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 5.93335H22.6667" stroke-width="1.5" />
-                                        <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
-                                    </svg>
+                                <div class="about-lead">
+                                    <p class="about-lead__title fadein">“ぽかぽか”で、物語を動かす。</p>
+                                    <p class="about-lead__description fadein">
+                                        私たちがつくりたいのは、お客様の想いが、誰かの心に残る体験です。<br
+                                            class="br-pc">ワンスクロールで流れていってしまう今だからこそ、心に残る温度を仕掛け、<br
+                                            class="br-pc">一人ひとりの物語を、前へと進めていきます。
+                                    </p>
                                 </div>
-                            </a>
+                            </div>
+                            <div class="button fadein">
+                                <a href="">
+                                    <p>View More</p>
+                                    <div class="button-arrow">
+                                        <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 5.93335H22.6667" stroke-width="1.5" />
+                                            <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+
                         <div class="about-partner">
                             <ul class="about-partner__list about-partner__track-left__slow">
                                 <li class="about-partner__item"><img src="./assets/img/partner_logo/dentsu.png"
@@ -444,6 +445,29 @@
                                         alt="Norton"></li>
                                 <li class="about-partner__item"><img src="./assets/img/partner_logo/surugaya.png"
                                         alt="Surugaya">
+                                </li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/nakatanibokujo.png"
+                                        alt="Nakatanibokujo">
+                                </li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/kamiamakusa.png"
+                                        alt="Kamiamakusa">
+                                </li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/yubetsu.png"
+                                        alt="Yubetsu"></li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/hamanetsu.png"
+                                        alt="Hamanetsu">
+                                </li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/nativecaravan.png"
+                                        alt="Native Caravan">
+                                </li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/emijingu.png"
+                                        alt="Emijingu">
+                                </li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/maiko.png"
+                                        alt="Maiko">
+                                </li>
+                                <li class="about-partner__item"><img src="./assets/img/partner_logo/sozoo.png"
+                                        alt="SOZOO">
                                 </li>
                             </ul>
                             <ul class="about-partner__list about-partner__track-right">
@@ -485,31 +509,6 @@
                                 <li class="about-partner__item"><img src="./assets/img/partner_logo/frontier.png"
                                         alt="Frontier">
                                 </li>
-                            </ul>
-                            <ul class="about-partner__list about-partner__track-left">
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/nakatanibokujo.png"
-                                        alt="Nakatanibokujo">
-                                </li>
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/kamiamakusa.png"
-                                        alt="Kamiamakusa">
-                                </li>
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/yubetsu.png"
-                                        alt="Yubetsu"></li>
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/hamanetsu.png"
-                                        alt="Hamanetsu">
-                                </li>
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/nativecaravan.png"
-                                        alt="Native Caravan">
-                                </li>
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/emijingu.png"
-                                        alt="Emijingu">
-                                </li>
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/maiko.png"
-                                        alt="Maiko">
-                                </li>
-                                <li class="about-partner__item"><img src="./assets/img/partner_logo/sozoo.png"
-                                        alt="SOZOO">
-                                </li>
                                 <li class="about-partner__item"><img src="./assets/img/partner_logo/nakatanibokujo.png"
                                         alt="Nakatanibokujo">
                                 </li>
@@ -537,26 +536,33 @@
                         </div>
                     </section>
                     <section class="service">
-                        <div class="section-title">
-                            <div class="section-sub_title">
-                                <div class="section-title__object">
+                        <div class="section-lead">
+                            <div class="section-title__wrapper">
+                                <div class="section-title">
+                                    <div class="section-sub_title">
+                                        <div class="section-title__object">
+                                        </div>
+                                        <p>事業内容</p>
+                                    </div>
+                                    <div class="section-main_title">
+                                        <h2>Service</h2>
+                                    </div>
                                 </div>
-                                <p>事業内容</p>
+                                <div class="service-lead">
+                                    <p class="service-lead__number">(01)</p>
+                                    <p class="service-lead__title">動画制作を起点にした、<br class="br-pc">成果をうみだすマーケティング支援。</p>
+                                    <p class="service-lead__description">
+                                        TikTok、Instagram、YouTubeShortsなど、<br
+                                            class="br-pc">SNSごとの特性に合わせた企画から運用まで一貫して支援します。</p>
+                                </div>
                             </div>
-                            <div class="section-main_title">
-                                <h2 class="fadein">Service</h2>
-                            </div>
-                        </div>
-                        <div class="service-lead">
-                            <p class="service-lead__number">(01)</p>
-                            <p class="service-lead__title">動画制作を起点にした、<br>成果をうみだす<br>マーケティング支援。</p>
-                            <p class="service-lead__description">
-                                TikTok、Instagram、YouTubeShortsなど、<br>SNSごとの特性に合わせた<br>企画から運用まで一貫して支援します。</p>
                         </div>
                         <div class="service-marketing">
-                            <video class="service-marketing__bg-video" autoplay muted loop playsinline>
+                            <div class="service-marketing__bg-video__wrapper">
+                                <video class="service-marketing__bg-video" autoplay muted loop playsinline>
                                 <source src="assets/video/bg-service-gradation.mp4" type="video/mp4">
                             </video>
+                            </div>
                             <div class="service-marketing__title-wrapper">
                                 <div class="service-marketing__title">
                                     <h3>(How to make a short video)</h3>
@@ -567,51 +573,65 @@
                                 <div class="service-marketing__area" id="stickyContainer">
                                     <div class="service-marketing__box">
                                         <div class="service-marketing__box-content c-1">
+                                            <h6 class="service-marketing__box-content-text__number-first">01</h6>
                                             <div class="service-marketing__box-content-text">
-                                                <h6 class="service-marketing__box-content-text__number">01</h6>
                                                 <h5>(Research)</h5>
                                                 <h4>リサーチ</h4>
                                                 <p class="reveal-text__service">市場のトレンドや競合を調査、<br>強みをもとに戦略策定をします。</p>
                                             </div>
+                                            <div class="service-marketing__box-content-img">
+                                                <img src="assets/img/company01.png" alt="">
+                                            </div>
                                         </div>
                                         <div class="service-marketing__box-content c-2">
+                                            <h6 class="service-marketing__box-content-text__number">02</h6>
                                             <div class="service-marketing__box-content-text">
-                                                <h6 class="service-marketing__box-content-text__number">02</h6>
                                                 <h5>(planning)</h5>
                                                 <h4>企画</h4>
                                                 <p class="reveal-text__service">人の心を動かすアイデアを、<br>企画や台本へ落とし込みます。</p>
                                             </div>
+                                            <div class="service-marketing__box-content-img">
+                                                <img src="assets/img/company02.png" alt="">
+                                            </div>
                                         </div>
                                         <div class="service-marketing__box-content c-3">
+                                            <h6 class="service-marketing__box-content-text__number">03</h6>
                                             <div class="service-marketing__box-content-text">
-                                                <h6 class="service-marketing__box-content-text__number">03</h6>
                                                 <h5>(Filming)</h5>
                                                 <h4>撮影</h4>
                                                 <p class="reveal-text__service">現場経験の豊富なチームが、<br>撮影へ伺います。</p>
                                             </div>
+                                            <div class="service-marketing__box-content-img">
+                                                <img src="assets/img/company03.png" alt="">
+                                            </div>
                                         </div>
                                         <div class="service-marketing__box-content c-4">
+                                            <h6 class="service-marketing__box-content-text__number">04</h6>
                                             <div class="service-marketing__box-content-text">
-                                                <h6 class="service-marketing__box-content-text__number">04</h6>
                                                 <h5>(Editing)</h5>
                                                 <h4>編集</h4>
                                                 <p class="reveal-text__service">ブランドのカラーや想いを大切に、<br>細部まで丁寧に仕上げます。</p>
                                             </div>
+                                            <div class="service-marketing__box-content-img">
+                                                <img src="assets/img/company04.png" alt="">
+                                            </div>
                                         </div>
                                         <div class="service-marketing__box-content c-5">
+                                            <h6 class="service-marketing__box-content-text__number">05</h6>
                                             <div class="service-marketing__box-content-text">
-                                                <h6 class="service-marketing__box-content-text__number">05</h6>
                                                 <h5>(Management)</h5>
                                                 <h4>運用</h4>
-                                                <p class="reveal-text__service">投稿後の反応やデータを分析。<br>改善を重ねて成果につながる運用を続けます。
-                                                </p>
+                                                <p class="reveal-text__service">投稿後の反応やデータを分析。<br>改善を重ねて成果につながる運用を続けます。</p>
+                                            </div>
+                                            <div class="service-marketing__box-content-img">
+                                                <img src="assets/img/company05.png" alt="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="button">
+                            <div class="button service-button">
                                 <a href="">
                                     <p>View More</p>
                                     <div class="button-arrow">
@@ -624,53 +644,75 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="service-lead">
-                            <p class="service-lead__number">(02)</p>
-                            <p class="service-lead__title">「好き」でつながる！<br>配信コミュニティでは、<br>ライバー募集中！</p>
-                            <p class="service-lead__description">
-                                特別なスキルがなくても大丈夫。<br>「誰かと話したい」、「自分の特技を誰かに届けたい」<br>そんな一歩から、<br>たくさんのファンに愛される<br>人気ライバーが続々と誕生しています。<br>リスナーと一緒に夢を追いかけ、<br>成長していけるアットホームなステージで、<br>あなたも自分らしく輝いてみませんか？
-                            </p>
+                        <div class="section-lead service-liver">
+                            <div class="section-title__wrapper">
+                                <div class="service-lead">
+                                    <p class="service-lead__number">(02)</p>
+                                    <p class="service-lead__title">「好き」でつながる！配信コミュニティでは、ライバー募集中！</p>
+                                    <p class="service-lead__description">
+                                        特別なスキルがなくても大丈夫。<br class="br-pc">「誰かと話したい」、「自分の特技を誰かに届けたい」。<br
+                                            class="br-pc">そんな一歩から、たくさんのファンに愛される人気ライバーが続々と誕生しています。<br
+                                            class="br-pc">リスナーと一緒に夢を追いかけ、成長していけるアットホームなステージで、あなたも自分らしく輝いてみませんか？
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                         <div class="service-liver__entry-wrapper">
-                            <a class="service-liver__entry" href="">
-                                <div class="service-liver__entry-icon">
-                                    <img src="assets/img/line_icon.png" alt="LINE">
+                            <div class="service-liver__entry-img">
+                                <div class="service-liver__entry-img__first">
+                                    <img class="service-liver__entry-img__first_img" src="assets/img/company05.png"
+                                        alt="">
                                 </div>
-                                <div class="service-liver__entry-text">
-                                    <h4>Line Official Account</h4>
-                                    <p>まずは、公式LINEに登録!</p>
+                                <div class="service-liver__entry-img__second">
+                                    <img class="service-liver__entry-img__second_img" src="assets/img/company04.png"
+                                        alt="">
                                 </div>
-                                <div class="service-liver__entry-arrow">
-                                    <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 5.93335H22.6667" stroke-width="1.5" />
-                                        <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
-                                    </svg>
+                            </div>
+                            <div class="service-liver__entry-inner">
+                                <a class="service-liver__entry" href="">
+                                    <div class="service-liver__entry-icon">
+                                        <img src="assets/img/line_icon.png" alt="LINE">
+                                    </div>
+                                    <div class="service-liver__entry-text">
+                                        <h4>Official Line Account</h4>
+                                    </div>
+                                    <div class="service-liver__entry-arrow">
+                                        <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 5.93335H22.6667" stroke-width="1.5" />
+                                            <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="button service-button">
+                                    <a href="">
+                                        <p>View More</p>
+                                        <div class="button-arrow">
+                                            <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 5.93335H22.6667" stroke-width="1.5" />
+                                                <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                        <div class="button">
-                            <a href="">
-                                <p>View More</p>
-                                <div class="button-arrow">
-                                    <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 5.93335H22.6667" stroke-width="1.5" />
-                                        <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
+
                     </section>
                     <section class="works">
-                        <div class="section-title">
-                            <div class="section-sub_title">
-                                <div class="section-title__object">
+                        <div class="section-lead">
+                            <div class="section-title__wrapper">
+                                <div class="section-title">
+                                    <div class="section-sub_title">
+                                        <div class="section-title__object">
+                                        </div>
+                                        <p>実績</p>
+                                    </div>
+                                    <div class="section-main_title">
+                                        <h2>Works</h2>
+                                    </div>
                                 </div>
-                                <p>実績</p>
-                            </div>
-                            <div class="section-main_title">
-                                <h2 class="fadein">Works</h2>
                             </div>
                         </div>
                         <div class="works-list__wrapper">
@@ -691,15 +733,16 @@
                                 </button>
                             </div>
                             <div class="works-list__ul-wrapper">
-                                <ul class="works-list works-slider">
+                                <ul class="works-list works-slider fadein">
                                     <li>
                                         <div class="works-list__contents">
                                             <a href="">
                                                 <div class="works-list__img">
-                                                    <img src="assets/img/company01.png" alt="">
+                                                    <img class="works-list__img-animation"
+                                                        src="assets/img/company01.png" alt="">
                                                 </div>
                                                 <h3 class="works-list__title">中谷牧場</h3>
-                                                <p class="works-list__category">@Company</p>
+                                                <p class="works-list__category">@company</p>
                                                 <div class="works-list__tag-wrapper">
                                                     <div class="works-list__tag">
                                                         <h4>TikTok</h4>
@@ -727,7 +770,34 @@
                                         <div class="works-list__contents">
                                             <a href="">
                                                 <div class="works-list__img">
-                                                    <img src="assets/img/company01.png" alt="">
+                                                    <img class="works-list__img-animation"
+                                                        src="assets/img/company02.png" alt="">
+                                                </div>
+                                                <h3 class="works-list__title">千原せいじ</h3>
+                                                <p class="works-list__category">@comedian</p>
+                                                <div class="works-list__tag-wrapper">
+                                                    <div class="works-list__tag">
+                                                        <h4>TikTok</h4>
+                                                    </div>
+                                                    <div class="works-list__tag">
+                                                        <h4>YouTube</h4>
+                                                    </div>
+                                                    <div class="works-list__tag">
+                                                        <h4>牧場</h4>
+                                                    </div>
+                                                    <div class="works-list__tag">
+                                                        <h4>企業</h4>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="works-list__contents">
+                                            <a href="">
+                                                <div class="works-list__img">
+                                                    <img class="works-list__img-animation"
+                                                        src="assets/img/company03.png" alt="">
                                                 </div>
                                                 <h3 class="works-list__title">中谷牧場</h3>
                                                 <p class="works-list__category">@Company</p>
@@ -752,7 +822,8 @@
                                         <div class="works-list__contents">
                                             <a href="">
                                                 <div class="works-list__img">
-                                                    <img src="assets/img/company01.png" alt="">
+                                                    <img class="works-list__img-animation"
+                                                        src="assets/img/company01.png" alt="">
                                                 </div>
                                                 <h3 class="works-list__title">中谷牧場</h3>
                                                 <p class="works-list__category">@Company</p>
@@ -777,32 +848,8 @@
                                         <div class="works-list__contents">
                                             <a href="">
                                                 <div class="works-list__img">
-                                                    <img src="assets/img/company01.png" alt="">
-                                                </div>
-                                                <h3 class="works-list__title">中谷牧場</h3>
-                                                <p class="works-list__category">@Company</p>
-                                                <div class="works-list__tag-wrapper">
-                                                    <div class="works-list__tag">
-                                                        <h4>TikTok</h4>
-                                                    </div>
-                                                    <div class="works-list__tag">
-                                                        <h4>YouTube</h4>
-                                                    </div>
-                                                    <div class="works-list__tag">
-                                                        <h4>牧場</h4>
-                                                    </div>
-                                                    <div class="works-list__tag">
-                                                        <h4>企業</h4>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="works-list__contents">
-                                            <a href="">
-                                                <div class="works-list__img">
-                                                    <img src="assets/img/company01.png" alt="">
+                                                    <img class="works-list__img-animation"
+                                                        src="assets/img/company01.png" alt="">
                                                 </div>
                                                 <h3 class="works-list__title">中谷牧場</h3>
                                                 <p class="works-list__category">@Company</p>
@@ -821,7 +868,8 @@
                                         <div class="works-list__contents">
                                             <a href="">
                                                 <div class="works-list__img">
-                                                    <img src="assets/img/company01.png" alt="">
+                                                    <img class="works-list__img-animation"
+                                                        src="assets/img/company01.png" alt="">
                                                 </div>
                                                 <h3 class="works-list__title">中谷牧場</h3>
                                                 <p class="works-list__category">@Company</p>
@@ -869,95 +917,82 @@
                         </div>
                     </section>
                     <section class="member">
-                        <div class="section-title">
-                            <div class="section-sub_title">
-                                <div class="section-title__object">
+                        <div class="section-lead">
+                            <div class="section-title__wrapper">
+                                <div class="section-title">
+                                    <div class="section-sub_title">
+                                        <div class="section-title__object">
+                                        </div>
+                                        <p>メンバー</p>
+                                    </div>
+                                    <div class="section-main_title">
+                                        <h2>Member</h2>
+                                    </div>
                                 </div>
-                                <p>メンバー</p>
                             </div>
-                            <div class="section-main_title">
-                                <h2 class="fadein">Member</h2>
-                            </div>
-                        </div>
-                        <div class="member-lead">
-                            <p class="member-lead__title">ぽかみたんメンバーをご紹介。</p>
                         </div>
                         <div class="member-list__wrapper">
                             <ul class="member-list">
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
+                                            <img class="member-list__img-animation" src="assets/img/company02.png"
+                                                alt="">
                                         </div>
                                         <h4 class="member-list__name">甘粕ジョージ</h4>
                                         <h5 class="member-list__name_en">George Amakasu</h5>
                                         <p class="member-list__position">Director</p>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
+                                            <img class="member-list__img-animation" src="assets/img/company02.png"
+                                                alt="">
                                         </div>
                                         <h4 class="member-list__name">甘粕ジョージ</h4>
                                         <h5 class="member-list__name_en">George Amakasu</h5>
                                         <p class="member-list__position">Director</p>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
+                                            <img class="member-list__img-animation" src="assets/img/company02.png"
+                                                alt="">
                                         </div>
                                         <h4 class="member-list__name">甘粕ジョージ</h4>
                                         <h5 class="member-list__name_en">George Amakasu</h5>
                                         <p class="member-list__position">Director</p>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
+                                            <img class="member-list__img-animation" src="assets/img/company02.png"
+                                                alt="">
                                         </div>
                                         <h4 class="member-list__name">甘粕ジョージ</h4>
                                         <h5 class="member-list__name_en">George Amakasu</h5>
                                         <p class="member-list__position">Director</p>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
+                                            <img class="member-list__img-animation" src="assets/img/company02.png"
+                                                alt="">
                                         </div>
                                         <h4 class="member-list__name">甘粕ジョージ</h4>
                                         <h5 class="member-list__name_en">George Amakasu</h5>
                                         <p class="member-list__position">Director</p>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
-                                        </div>
-                                        <h4 class="member-list__name">甘粕ジョージ</h4>
-                                        <h5 class="member-list__name_en">George Amakasu</h5>
-                                        <p class="member-list__position">Director</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
-                                        </div>
-                                        <h4 class="member-list__name">甘粕ジョージ</h4>
-                                        <h5 class="member-list__name_en">George Amakasu</h5>
-                                        <p class="member-list__position">Director</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="member-list__img">
-                                            <img src="assets/img/company02.png" alt="">
+                                            <img class="member-list__img-animation" src="assets/img/company02.png"
+                                                alt="">
                                         </div>
                                         <h4 class="member-list__name">甘粕ジョージ</h4>
                                         <h5 class="member-list__name_en">George Amakasu</h5>
@@ -980,332 +1015,174 @@
                         </div>
                     </section>
                     <section class="blog">
-                        <div class="section-title">
-                            <div class="section-sub_title">
-                                <div class="section-title__object">
+                        <div class="section-lead">
+                            <div class="section-title__wrapper">
+                                <div class="section-title">
+                                    <div class="section-sub_title">
+                                        <div class="section-title__object">
+                                        </div>
+                                        <p>ブログ</p>
+                                    </div>
+                                    <div class="section-main_title">
+                                        <h2>blog</h2>
+                                    </div>
                                 </div>
-                                <p>ブログ</p>
-                            </div>
-                            <div class="section-main_title">
-                                <h2 class="fadein">blog</h2>
                             </div>
                         </div>
                         <div class="blog-list__wrapper">
                             <ul class="blog-list">
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="blog-list__contents">
-                                            <div class="blog-list__contents-caption">
-                                                <h4 class="blog-list__contents-caption__title">ブログタイトル</h4>
-                                                <p class="blog-list__contents-caption__writer">written by staff</p>
+                                            <div class="blog-list__contents-img">
+                                                <img src="assets/img/company01.png" alt="">
                                             </div>
-                                            <div class="blog-list__contents-time">
-                                                <time datetime="">
-                                                    <p class="blog-list__contents-time_date">01</p>
-                                                    <div class="blog-list__contents-time_year_month">
-                                                        <p class="blog-list__contents-time_year">2026</p>
-                                                        <p class="blog-list__contents-time_month">Jun.</p>
-                                                    </div>
-                                                </time>
+                                            <div class="blog-list__contents-caption">
+                                                <div class="blog-list__contents-caption__date">
+                                                    <time datetime="">2026.01.01</time>
+                                                    <p class="blog-list__contents-caption__category">お知らせ</p>
+                                                </div>
+                                                <h4 class="blog-list__contents-caption__title">ブログタイトル</h4>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="blog-list__contents">
-                                            <div class="blog-list__contents-caption">
-                                                <h4 class="blog-list__contents-caption__title">ブログタイトル</h4>
-                                                <p class="blog-list__contents-caption__writer">written by staff</p>
+                                            <div class="blog-list__contents-img">
+                                                <img src="assets/img/company01.png" alt="">
                                             </div>
-                                            <div class="blog-list__contents-time">
-                                                <time datetime="">
-                                                    <p class="blog-list__contents-time_date">01</p>
-                                                    <div class="blog-list__contents-time_year_month">
-                                                        <p class="blog-list__contents-time_year">2026</p>
-                                                        <p class="blog-list__contents-time_month">Jun.</p>
-                                                    </div>
-                                                </time>
+                                            <div class="blog-list__contents-caption">
+                                                <div class="blog-list__contents-caption__date">
+                                                    <time datetime="">2026.01.01</time>
+                                                    <p class="blog-list__contents-caption__category">お知らせ</p>
+                                                </div>
+                                                <h4 class="blog-list__contents-caption__title">ブログタイトル</h4>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="fadein">
                                     <a href="">
                                         <div class="blog-list__contents">
+                                            <div class="blog-list__contents-img">
+                                                <img src="assets/img/company01.png" alt="">
+                                            </div>
                                             <div class="blog-list__contents-caption">
-                                                <h4 class="blog-list__contents-caption__title">ブログタイトル</h4>
-                                                <p class="blog-list__contents-caption__writer">written by staff</p>
-                                            </div>
-                                            <div class="blog-list__contents-time">
-                                                <time datetime="">
-                                                    <p class="blog-list__contents-time_date">01</p>
-                                                    <div class="blog-list__contents-time_year_month">
-                                                        <p class="blog-list__contents-time_year">2026</p>
-                                                        <p class="blog-list__contents-time_month">Jun.</p>
-                                                    </div>
-                                                </time>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="blog-list__contents">
-                                            <div class="blog-list__contents-caption">
-                                                <h4 class="blog-list__contents-caption__title">ブログタイトル</h4>
-                                                <p class="blog-list__contents-caption__writer">written by staff</p>
-                                            </div>
-                                            <div class="blog-list__contents-time">
-                                                <time datetime="">
-                                                    <p class="blog-list__contents-time_date">01</p>
-                                                    <div class="blog-list__contents-time_year_month">
-                                                        <p class="blog-list__contents-time_year">2026</p>
-                                                        <p class="blog-list__contents-time_month">Jun.</p>
-                                                    </div>
-                                                </time>
+                                                <div class="blog-list__contents-caption__date">
+                                                    <time datetime="">2026.01.01</time>
+                                                    <p class="blog-list__contents-caption__category">お知らせ</p>
+                                                </div>
+                                                <h4 class="blog-list__contents-caption__title">
+                                                    ブログタイトルブログタイトルブログタイトルブログタイトルブログタイトル</h4>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
                             </ul>
+                            <div class="button">
+                                <a href="">
+                                    <p>View More</p>
+                                    <div class="button-arrow">
+                                        <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 5.93335H22.6667" stroke-width="1.5" />
+                                            <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="button">
-                            <a href="">
-                                <p>View More</p>
-                                <div class="button-arrow">
-                                    <svg width="100%" height="100%" viewBox="0 0 29 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 5.93335H22.6667" stroke-width="1.5" />
-                                        <path d="M20 0.599976L27.1111 5.93331L20 11.2666" stroke-width="1.5" />
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
+
                     </section>
                 </div>
             </main>
-            <footer class="footer">
-                <div class="footer-wrapper">
-                    <nav class="footer-nav">
-                        <ul class="footer-nav__list">
-                            <li>
-                                <a class="footer-nav__button" href="index.html">
-                                    <p class="footer-nav__title">TOP</p>
-                                </a>
-                            </li>
-                            <li>
-                                <button class="footer-nav__button">
-                                    <p class="footer-nav__title">ABOUT</p>
-                                    <div class="footer-nav__button-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 11 7" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 0.707092L5.5 5.70709L10.5 0.707092" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </button>
-                                <div class="footer-nav__dropdown">
-                                    <a class="footer-nav__dropdown-button" href="about.html">
-                                        <p>Top</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p class="footer-nav__dropdown-title">会社詳細</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p>支店情報</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p class="footer-nav__dropdown-title">事業実績</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="footer-nav__button">
-                                    <p class="footer-nav__title">SERVICE</p>
-                                    <div class="footer-nav__button-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 11 7" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 0.707092L5.5 5.70709L10.5 0.707092" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </button>
-                                <div class="footer-nav__dropdown">
-                                    <a class="footer-nav__dropdown-button" href="service.html">
-                                        <p>Top</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p>動画制作</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p class="footer-nav__dropdown-title">ライバー募集</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <button class="footer-nav__button">
-                                    <p class="footer-nav__title">WORKS</p>
-                                    <div class="footer-nav__button-arrow">
-                                        <svg width="100%" height="100%" viewBox="0 0 11 7" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M0.5 0.707092L5.5 5.70709L10.5 0.707092" stroke-linecap="round" />
-                                        </svg>
-                                    </div>
-                                </button>
-                                <div class="footer-nav__dropdown">
-                                    <a class="footer-nav__dropdown-button" href="works.html">
-                                        <p>Top</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p class="footer-nav__dropdown-title">TikTok</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p class="footer-nav__dropdown-title">YouTube</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                    <a class="footer-nav__dropdown-button" href="">
-                                        <p class="footer-nav__dropdown-title">Live Streaming</p>
-                                        <div class="footer-nav__dropdown-arrow">
-                                            <svg width="100%" height="100%" viewBox="0 0 7 11" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M0.707092 0.5L5.70709 5.5L0.707092 10.5"
-                                                    stroke-linecap="round" />
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="footer-nav__button" href="member.html">
-                                    <p class="footer-nav__title">MEMBER</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="footer-nav__button" href="blog.html">
-                                    <p class="footer-nav__title">BLOG</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="footer-nav__button" href="contect.html">
-                                    <p class="footer-nav__title">CONTACT</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div>
-                        <div class="footer-logo">
-                            <svg width="100%" height="100%" viewBox="0 0 324 34" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M45.8955 33.2474C38.4124 33.2474 32.3234 27.2124 32.3234 19.7957V13.6041C32.3234 6.18744 38.4124 0.152374 45.8955 0.152374C53.3785 0.152374 59.4676 6.18744 59.4676 13.6041V19.7957C59.4676 27.2124 53.3785 33.2474 45.8955 33.2474ZM45.8955 6.91634C42.1747 6.91634 39.1458 9.91637 39.1458 13.6062V19.7977C39.1458 23.4855 42.1726 26.4876 45.8955 26.4876C49.6183 26.4876 52.6452 23.4875 52.6452 19.7977V13.6062C52.6452 9.91843 49.6183 6.91634 45.8955 6.91634Z"
-                                    fill="#1E1E1E" />
-                                <path d="M77.6184 0.152374H70.796V33.2474H77.6184V0.152374Z" fill="#1E1E1E" />
-                                <path
-                                    d="M89.2502 33.2474L80.583 21.6838C78.3477 18.7023 78.3477 14.6975 80.583 11.716L89.2502 0.152374L97.6972 0.222382L86.0592 15.7496C85.6333 16.3179 85.6333 17.0839 86.0592 17.6522L97.7491 33.2474H89.2481H89.2502Z"
-                                    fill="#1E1E1E" />
-                                <path
-                                    d="M186.077 33.2474L183.399 8.43178C183.378 8.24647 183.355 8.14352 183.341 8.08998C183.251 7.79348 183.104 7.55463 182.886 7.35902C182.362 6.89162 181.778 6.98633 181.479 7.08311C181.213 7.16959 180.576 7.45991 180.411 8.26294L176.961 25.075L170.357 25.0627L165.909 8.20735C165.707 7.44344 165.096 7.15929 164.841 7.07281C164.554 6.97398 163.993 6.87103 163.455 7.2746C163.185 7.47845 162.996 7.7523 162.894 8.08998C162.878 8.14352 162.855 8.24647 162.836 8.43178L160.158 33.2474H153.296L156.053 7.71112C156.113 7.149 156.213 6.64453 156.354 6.17095C156.87 4.44547 157.902 2.96296 159.338 1.88402C161.546 0.226489 164.44 -0.224442 167.076 0.681538C169.762 1.60399 171.794 3.77628 172.511 6.49628L173.242 9.26776L173.726 6.91427C174.327 3.99248 176.479 1.59781 179.344 0.660947C182.202 -0.273859 185.231 0.352091 187.452 2.33289C188.601 3.3583 189.442 4.68432 189.885 6.17095C190.026 6.64659 190.124 7.149 190.186 7.71112L192.943 33.2474H186.081H186.077Z"
-                                    fill="#1E1E1E" />
-                                <path d="M211.092 0.152374H204.269V33.2474H211.092V0.152374Z" fill="#1E1E1E" />
-                                <path d="M237.043 9.07214H230.221V33.2474H237.043V9.07214Z" fill="#1E1E1E" />
-                                <path d="M245.746 0.152374H221.52V6.91428H245.746V0.152374Z" fill="#1E1E1E" />
-                                <path
-                                    d="M6.82864 33.2474H0.0062324V25.6537H0V18.8917H0.0062324V0.152374H10.9628C18.0574 0.152374 23.8265 5.8724 23.8265 12.902C23.8265 19.9316 18.0553 25.6516 10.9628 25.6516H6.83072V33.2454L6.82864 33.2474ZM6.82864 18.8917H10.9607C14.293 18.8917 17.002 16.2047 17.002 12.904C17.002 9.60339 14.2909 6.91634 10.9607 6.91634H6.82864V18.8917Z"
-                                    fill="#1E1E1E" />
-                                <path
-                                    d="M135.983 33.2475L126.472 7.6144C126.144 7.06875 125.622 6.98227 125.329 6.98227C125.037 6.98227 124.515 7.06669 124.187 7.6144L114.676 33.2475H107.407L117.923 4.9047L118.002 4.74821C119.384 1.95614 122.192 0.220367 125.331 0.220367C128.471 0.220367 131.277 1.95614 132.661 4.74821L132.74 4.9047L143.256 33.2475H135.987H135.983Z"
-                                    fill="#1E1E1E" />
-                                <path
-                                    d="M125.329 30.3791C127.476 30.3791 129.216 28.6543 129.216 26.5267C129.216 24.399 127.476 22.6742 125.329 22.6742C123.183 22.6742 121.443 24.399 121.443 26.5267C121.443 28.6543 123.183 30.3791 125.329 30.3791Z"
-                                    fill="#BC002D" />
-                                <path
-                                    d="M279.729 33.2475L270.218 7.6144C269.89 7.06875 269.369 6.98227 269.076 6.98227C268.783 6.98227 268.261 7.06669 267.933 7.6144L258.423 33.2475H251.153L261.67 4.9047L261.749 4.74821C263.13 1.95614 265.939 0.220367 269.078 0.220367C272.217 0.220367 275.024 1.95614 276.407 4.74821L276.486 4.9047L287.002 33.2475H279.733H279.729Z"
-                                    fill="#1E1E1E" />
-                                <path
-                                    d="M269.076 30.3791C271.222 30.3791 272.963 28.6543 272.963 26.5267C272.963 24.399 271.222 22.6742 269.076 22.6742C266.929 22.6742 265.189 24.399 265.189 26.5267C265.189 28.6543 266.929 30.3791 269.076 30.3791Z"
-                                    fill="#BC002D" />
-                                <path
-                                    d="M320.506 0H317.013L317.597 24.9433C317.36 24.6632 317.115 24.3379 316.856 23.9611C315.354 21.7579 314.034 18.5396 312.761 15.4284C311.354 11.9939 309.9 8.44003 307.995 5.65002C305.438 1.90256 302.309 0.00205905 298.696 0.00205905H295.204V33.4039H302.189L301.995 8.95273C302.11 9.1051 302.226 9.26776 302.347 9.44278C303.849 11.646 305.168 14.8642 306.441 17.9755C307.848 21.41 309.302 24.9639 311.207 27.7539C313.764 31.5013 316.893 33.4018 320.508 33.4018H324V0H320.508H320.506Z"
-                                    fill="#1E1E1E" />
-                            </svg>
-                        </div>
-                        <div class="footer-copylight">
-                            <p>株式会社ぽかみたん</p>
-                            <small>Copyright © 2024 Pokamitan confidential</small>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+
         </div>
+
     </div>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <nav class="footer-nav">
+                <div class="footer-logo">
+                    <svg width="100%" height="100%" viewBox="0 0 324 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M45.8955 33.2474C38.4124 33.2474 32.3234 27.2124 32.3234 19.7957V13.6041C32.3234 6.18744 38.4124 0.152374 45.8955 0.152374C53.3785 0.152374 59.4676 6.18744 59.4676 13.6041V19.7957C59.4676 27.2124 53.3785 33.2474 45.8955 33.2474ZM45.8955 6.91634C42.1747 6.91634 39.1458 9.91637 39.1458 13.6062V19.7977C39.1458 23.4855 42.1726 26.4876 45.8955 26.4876C49.6183 26.4876 52.6452 23.4875 52.6452 19.7977V13.6062C52.6452 9.91843 49.6183 6.91634 45.8955 6.91634Z"
+                            fill="#1E1E1E" />
+                        <path d="M77.6184 0.152374H70.796V33.2474H77.6184V0.152374Z" fill="#1E1E1E" />
+                        <path
+                            d="M89.2502 33.2474L80.583 21.6838C78.3477 18.7023 78.3477 14.6975 80.583 11.716L89.2502 0.152374L97.6972 0.222382L86.0592 15.7496C85.6333 16.3179 85.6333 17.0839 86.0592 17.6522L97.7491 33.2474H89.2481H89.2502Z"
+                            fill="#1E1E1E" />
+                        <path
+                            d="M186.077 33.2474L183.399 8.43178C183.378 8.24647 183.355 8.14352 183.341 8.08998C183.251 7.79348 183.104 7.55463 182.886 7.35902C182.362 6.89162 181.778 6.98633 181.479 7.08311C181.213 7.16959 180.576 7.45991 180.411 8.26294L176.961 25.075L170.357 25.0627L165.909 8.20735C165.707 7.44344 165.096 7.15929 164.841 7.07281C164.554 6.97398 163.993 6.87103 163.455 7.2746C163.185 7.47845 162.996 7.7523 162.894 8.08998C162.878 8.14352 162.855 8.24647 162.836 8.43178L160.158 33.2474H153.296L156.053 7.71112C156.113 7.149 156.213 6.64453 156.354 6.17095C156.87 4.44547 157.902 2.96296 159.338 1.88402C161.546 0.226489 164.44 -0.224442 167.076 0.681538C169.762 1.60399 171.794 3.77628 172.511 6.49628L173.242 9.26776L173.726 6.91427C174.327 3.99248 176.479 1.59781 179.344 0.660947C182.202 -0.273859 185.231 0.352091 187.452 2.33289C188.601 3.3583 189.442 4.68432 189.885 6.17095C190.026 6.64659 190.124 7.149 190.186 7.71112L192.943 33.2474H186.081H186.077Z"
+                            fill="#1E1E1E" />
+                        <path d="M211.092 0.152374H204.269V33.2474H211.092V0.152374Z" fill="#1E1E1E" />
+                        <path d="M237.043 9.07214H230.221V33.2474H237.043V9.07214Z" fill="#1E1E1E" />
+                        <path d="M245.746 0.152374H221.52V6.91428H245.746V0.152374Z" fill="#1E1E1E" />
+                        <path
+                            d="M6.82864 33.2474H0.0062324V25.6537H0V18.8917H0.0062324V0.152374H10.9628C18.0574 0.152374 23.8265 5.8724 23.8265 12.902C23.8265 19.9316 18.0553 25.6516 10.9628 25.6516H6.83072V33.2454L6.82864 33.2474ZM6.82864 18.8917H10.9607C14.293 18.8917 17.002 16.2047 17.002 12.904C17.002 9.60339 14.2909 6.91634 10.9607 6.91634H6.82864V18.8917Z"
+                            fill="#1E1E1E" />
+                        <path
+                            d="M135.983 33.2475L126.472 7.6144C126.144 7.06875 125.622 6.98227 125.329 6.98227C125.037 6.98227 124.515 7.06669 124.187 7.6144L114.676 33.2475H107.407L117.923 4.9047L118.002 4.74821C119.384 1.95614 122.192 0.220367 125.331 0.220367C128.471 0.220367 131.277 1.95614 132.661 4.74821L132.74 4.9047L143.256 33.2475H135.987H135.983Z"
+                            fill="#1E1E1E" />
+                        <path
+                            d="M125.329 30.3791C127.476 30.3791 129.216 28.6543 129.216 26.5267C129.216 24.399 127.476 22.6742 125.329 22.6742C123.183 22.6742 121.443 24.399 121.443 26.5267C121.443 28.6543 123.183 30.3791 125.329 30.3791Z"
+                            fill="#BC002D" />
+                        <path
+                            d="M279.729 33.2475L270.218 7.6144C269.89 7.06875 269.369 6.98227 269.076 6.98227C268.783 6.98227 268.261 7.06669 267.933 7.6144L258.423 33.2475H251.153L261.67 4.9047L261.749 4.74821C263.13 1.95614 265.939 0.220367 269.078 0.220367C272.217 0.220367 275.024 1.95614 276.407 4.74821L276.486 4.9047L287.002 33.2475H279.733H279.729Z"
+                            fill="#1E1E1E" />
+                        <path
+                            d="M269.076 30.3791C271.222 30.3791 272.963 28.6543 272.963 26.5267C272.963 24.399 271.222 22.6742 269.076 22.6742C266.929 22.6742 265.189 24.399 265.189 26.5267C265.189 28.6543 266.929 30.3791 269.076 30.3791Z"
+                            fill="#BC002D" />
+                        <path
+                            d="M320.506 0H317.013L317.597 24.9433C317.36 24.6632 317.115 24.3379 316.856 23.9611C315.354 21.7579 314.034 18.5396 312.761 15.4284C311.354 11.9939 309.9 8.44003 307.995 5.65002C305.438 1.90256 302.309 0.00205905 298.696 0.00205905H295.204V33.4039H302.189L301.995 8.95273C302.11 9.1051 302.226 9.26776 302.347 9.44278C303.849 11.646 305.168 14.8642 306.441 17.9755C307.848 21.41 309.302 24.9639 311.207 27.7539C313.764 31.5013 316.893 33.4018 320.508 33.4018H324V0H320.508H320.506Z"
+                            fill="#1E1E1E" />
+                    </svg>
+                </div>
+                <ul class="footer-nav__list">
+                    <li>
+                        <a class="footer-nav__button" href="index.html">
+                            <p class="footer-nav__title">Top</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-nav__button" href="index.html">
+                            <p class="footer-nav__title">About</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-nav__button" href="index.html">
+                            <p class="footer-nav__title">Service</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-nav__button" href="index.html">
+                            <p class="footer-nav__title">Works</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-nav__button" href="index.html">
+                            <p class="footer-nav__title">Member</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-nav__button" href="index.html">
+                            <p class="footer-nav__title">Blog</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer-nav__button" href="index.html">
+                            <p class="footer-nav__title">Contact</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer-copylight">
+                <small>© Pokamitan confidential. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
     <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
