@@ -1020,11 +1020,18 @@ body::-webkit-scrollbar-thumb {
 
 .footer-nav__list li {
   margin: 15px 25px 0 0;
+  transition: 0.3s;
+}
+
+.footer-nav__list:has(li:hover) li:not(:hover) {
+  opacity: 0.5;
+  transition: 0.27s ease-in-out;
 }
 
 .footer-nav__list li a {
   font-size: 1.5rem;
   font-weight: 400;
+  transition: 0.3s;
 }
 
 .footer-copylight {
