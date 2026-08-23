@@ -982,8 +982,7 @@
     }*/
 
     .service-marketing__box-content-text {
-        backdrop-filter: blur(0);
-        padding-bottom: 15vh;
+        backdrop-filter: blur(5px);
     }
 
     .service-marketing__box-content-text h5 {
